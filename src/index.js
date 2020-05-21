@@ -43,7 +43,7 @@ const template = () => (
     width={1}
   >
     <Box padding="0 1em">
-      <FullScreen />
+      <FullScreen color="black" />
     </Box>
     <Box padding="1em">
       <Progress />
@@ -96,9 +96,13 @@ int main()
 
 const Presentation = () => (
   <Deck theme={theme} template={template} transitionEffect="fade">
-    <Slide>
+    <Slide backgroundColor="#f8f9fa">
       <FlexBox height="100%">
-        <SpectacleLogo size={500} />
+        <Image
+          color="#ff5a00"
+          src="/images/feedback-app-logo2.svg"
+          size={500}
+        />
       </FlexBox>
     </Slide>
     <Slide>
