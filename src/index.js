@@ -25,6 +25,15 @@ import {
   indentNormalizer,
 } from "spectacle";
 
+import logo from "./static/images/feedback-app-logo2.svg";
+import mainView from "./static/images/mainview.png";
+import evaluationPage from "./static/images/evaluationPage.png";
+import thankYouPage from "./static/images/thankYouPage.png";
+import evaluationPageMobile1 from "./static/images/evaluationPage-mobile-1.png";
+import evaluationPageMobile2 from "./static/images/evaluationPage-mobile-2.png";
+import evaluationPageTablet1 from "./static/images/evaluationPage-tablet-1.png";
+import evaluationPageTablet2 from "./static/images/evaluationPage-tablet-2.png";
+
 // SPECTACLE_CLI_THEME_START
 const theme = {
   fonts: {
@@ -98,7 +107,9 @@ const Presentation = () => (
   <Deck theme={theme} template={template} transitionEffect="fade">
     <Slide backgroundColor="#f8f9fa">
       <FlexBox height="100%">
-        <Image src="" size={500} />
+        <FlexBox size={600} borderRadius="50%" backgroundColor="#ff5a00">
+          <Image src={logo} size={500} />
+        </FlexBox>
       </FlexBox>
     </Slide>
     <Slide>
@@ -167,12 +178,72 @@ const Presentation = () => (
         Główny widok - lista pracowników
       </Heading>
       <FlexBox display="flex" width="100%" justifyContent="space-around">
-        <Image src="" size={500} />
-        <Box size={500} width={800}>
-          <Text textAlign="center" fontSize="20px" color="black">
-            Główny widok - lista pracowników
-          </Text>
-        </Box>
+        <Image src={mainView} width="60%" />
+        <Text
+          fontSize="20px"
+          color="black"
+          margin="20px"
+          lineHeight="30px"
+          textAlign="justify"
+        >
+          Po udanym logowaniu jesteśmy przekierowywani na główny widok aplikacji
+          - listę pracowników. Lista odzwierciedla hierarchię aktualnie
+          zalogowanego użytkownika. W tym przypadku jest to hierachia jednego z
+          manager'ów. Za pomocą pola do wyszukiwania możemy wyszukać pracownika
+          i klijac na niego przejść do jego listy feedback'ów. Po lewej stronie
+          widzimi także menu nawigacyjne do przechodzenia pomiędzy listami a po
+          kliknięciu w pole 'Wyślij zaproszenie' otwiera się panel do jego
+          stworzenia.
+        </Text>
+      </FlexBox>
+    </Slide>
+    <Slide backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Ocena pracownika
+      </Heading>
+      <FlexBox display="flex" width="100%" justifyContent="space-around">
+        <Text
+          fontSize="20px"
+          color="black"
+          margin="20px"
+          lineHeight="30px"
+          textAlign="justify"
+        >
+          Po kliknięciu w przycisk 'Wystaw opinię' w otrzymanym od nas mailu w
+          przeglądarce otwiera się okno z formularzem do oceny pracownika.
+          Strona jest w pełni responsywna, co pozwoli na wypełnienie formularza
+          na dowolnym urządzeniu.
+        </Text>
+        <Image src={evaluationPage} width="60%" />
+      </FlexBox>
+    </Slide>
+    <Slide backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Ocena pracownika - widok mobilny
+      </Heading>
+      <FlexBox height="400px">
+        <Image src={evaluationPageMobile1} height="100%" />
+        <Image src={evaluationPageMobile2} height="100%" />
+        <Image src={evaluationPageTablet1} height="100%" />
+        <Image src={evaluationPageTablet2} height="100%" />
+      </FlexBox>
+    </Slide>
+    <Slide backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Strona podziękowań
+      </Heading>
+      <FlexBox display="flex" width="100%" justifyContent="space-around">
+        <Image src={thankYouPage} width="60%" />
+        <Text
+          fontSize="20px"
+          color="black"
+          margin="20px"
+          lineHeight="30px"
+          textAlign="justify"
+        >
+          Po pomyślnym wysłaniu oceny osoba oceniająca zostaje przekierowana na
+          stronę z podziękowaniami.
+        </Text>
       </FlexBox>
     </Slide>
     <Slide transitionEffect="slide">
