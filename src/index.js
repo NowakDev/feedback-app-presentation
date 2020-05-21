@@ -76,7 +76,7 @@ const Presentation = () => (
           Wstęp
         </Heading>
         <Text color="black" textAlign="center">
-          Nasza aplikacja służy do zbierania i przetrzymywania feedbacków o
+          Nasza aplikacja służy do zbierania i przechowywania feedbacków o
           pracownikach naszej firmy. Feedbacki są zbierane z firm zewnętrznych,
           jak i z naszej firmy. Głównym celem aplikacji jest przyśpieszenie
           procesu zbierania feedbacków.
@@ -117,7 +117,7 @@ const Presentation = () => (
           <Text color="black">Backend</Text>
           <UnorderedList>
             <ListItem color="black">
-              <CodeSpan>Nodejs</CodeSpan>
+              <CodeSpan>NodeJS</CodeSpan>
             </ListItem>
             <ListItem color="black">
               <CodeSpan>ExpressJS</CodeSpan>
@@ -162,9 +162,9 @@ const Presentation = () => (
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
         <Text fontSize="24px" color="black" textAlign="justify">
-          Jest to komponent, który służący do przechowywania naszych kontaktów
-          do których będziemy chcieli wysyłać zaproszenia do wystawiania opinii
-          o danym pracowniku
+          Jest to komponent, który służy w celu przechowywania naszych kontaktów
+          do których będziemy chcieli wysyłać zaproszenia na temat wystawienia
+          opinii o danym pracowniku.
         </Text>
         <Image src={contactList} width="60%" />
       </FlexBox>
@@ -187,8 +187,8 @@ const Presentation = () => (
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
         <Text fontSize="24px" color="black" textAlign="justify">
-          Po poprawnym dodaniu kontaktu wyświetli nam się komunikat na górze
-          strony, informujący nas o sukcesie.
+          Po poprawnym dodaniu kontaktu na górze strony wyświetli nam się
+          komunikat informujący nas o sukcesie.
         </Text>
         <Image src={contactFormSuccess} width="60%" />
       </FlexBox>
@@ -200,10 +200,10 @@ const Presentation = () => (
       <FlexBox flexDirection="row" alignItems="center">
         <Image src={employeeFeedbacks} width="60%" />
         <Text fontSize="24px" color="black" textAlign="justify">
-          Po wybraniu pracownika który nas interesuje, przechodzimy do widoku
-          jego feedbacków. Na tym widoku mamy wgląd do wszystkich feedbacków
-          które dany pracownik otrzymał do tej pory. Możemy też stworzyć nowe
-          zaproszenie do wystawienia oceny
+          Po wybraniu pracownika z listy, przechodzimy do widoku jego
+          feedbacków. Na tym widoku mamy wgląd do wszystkich feedbacków które
+          dany pracownik otrzymał do tej pory. Możemy też stworzyć nowe
+          zaproszenie do wystawienia oceny o danym pracowniku.
         </Text>
       </FlexBox>
     </Slide>
@@ -216,7 +216,7 @@ const Presentation = () => (
           W formularzu wpisujemy potrzebne informacje oraz wybieramy adresatów
           do któych chcemy wysłać zaproszenie na temat danego pracownika. W
           liście adresatów możemy wybrać osobę z naszej listy kontaktów lub z
-          listy pracowników. Jeżeli osoba do której chcemy wysłać prośbę o
+          listy pracowników. Jeżeli osoby do której chcemy wysłać prośbę o
           wystawienie feedbacku nie ma na żadnej liście, możemy ją bezpośrednio
           dodać z tego formularza po naciśnięciu przycisku dodaj kontakt.
         </Text>
@@ -234,8 +234,9 @@ const Presentation = () => (
           wysłany do wcześniej wybranych przez nas adresatów. Na szablonie
           znajdziemy informacje o użytkownik, który chce wysłać maila, o
           pracowniku, którego chcemy ocenić oraz nazwę projektu w którym brał
-          udział. Taki mail zostanie wysłany do wszystkich adresatów których
-          zaznaczymy.
+          udział. W miejscu napisu Odbiorco w docelowym mailu znajduje się imie
+          i nazwisko odbiorcy danego maila. Taki mail zostanie wysłany do
+          wszystkich adresatów których zaznaczymy.
         </Text>
       </FlexBox>
     </Slide>
@@ -247,8 +248,8 @@ const Presentation = () => (
         <Text fontSize="24px" color="black" textAlign="justify">
           Po wysyłce maila ukaże nam się wiadomość na górze strony informująca
           nas o tym, że udało się pomyślnie stworzyć zaproszenie oraz link,
-          który otworzy nam panel w którym bedziemi mieli informacje o danym
-          zaproszeniu.
+          który otworzy nam panel w którym znajdziemy informacje odnośnie danego
+          zaproszenia .
         </Text>
         <Image src={invitationSuccess} width="60%" />
       </FlexBox>
@@ -260,7 +261,10 @@ const Presentation = () => (
       <FlexBox>
         <Image src={statuses} width="150%" />
         <Text fontSize="24px" color="black" textAlign="justify">
-          <p>Statusy informują nas o tym w jakim stanie jest dany feedback.</p>
+          <p>
+            Statusy informują nas o tym w jakim stanie znajduje się aktualnie
+            dany feedback.
+          </p>
           <br /> Partial mówi o tym, że na wybrany feedback odpowiedziała część
           z osób poproszonych o wystawienie opinii.
           <br />
