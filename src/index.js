@@ -8,6 +8,7 @@ import invitationForm from "./static/images/invitationForm.png";
 import emailPreview from "./static/images/emailPreview.png";
 import invitationSuccess from "./static/images/invitationSuccess.png";
 import rightPanel from "./static/images/rightPanel.png";
+import statuses from "./static/images/statuses.png";
 
 import {
   Box,
@@ -77,7 +78,8 @@ const Presentation = () => (
         <Text color="black" textAlign="center">
           Nasza aplikacja służy do zbierania i przetrzymywania feedbacków o
           pracownikach naszej firmy. Feedbacki są zbierane z firm zewnętrznych,
-          jak i naszej firmy.
+          jak i z naszej firmy. Głównym celem aplikacji jest przyśpieszenie
+          procesu zbierania feedbacków.
         </Text>
       </FlexBox>
     </Slide>
@@ -249,6 +251,29 @@ const Presentation = () => (
           zaproszeniu.
         </Text>
         <Image src={invitationSuccess} width="60%" />
+      </FlexBox>
+    </Slide>
+    <Slide backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista feedbacków
+      </Heading>
+      <FlexBox>
+        <Image src={statuses} width="150%" />
+        <Text fontSize="24px" color="black" textAlign="justify">
+          <p>Statusy informują nas o tym w jakim stanie jest dany feedback.</p>
+          <br /> Partial mówi o tym, że na wybrany feedback odpowiedziała część
+          z osób poproszonych o wystawienie opinii.
+          <br />
+          Completed mówi o tym, że na wybrany feedback odpowiedzieli wszyscy z
+          proszonych o wystawienie opinii.
+          <br />
+          Pending mówi o tym, że na wybrany feedback nie otrzymaliśmy jeszcze
+          żadnej odpowiedzi, a status oczekiwania nie jest dłuższy niż 7 dni
+          <br />
+          NoAnswer mówi o tym, że na wybrany feedback nie otrzymaliśmy żadnej
+          odpowiedzi, a status oczekiwania jest dłuższy niż 7 dni
+          <br />
+        </Text>
       </FlexBox>
     </Slide>
     <Slide backgroundColor="#f8f9fa">
