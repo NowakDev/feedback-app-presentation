@@ -1,28 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import contactList from "./static/images/contactList.png";
+import contactForm from "./static/images/contactForm.png";
+import contactFormSuccess from "./static/images/contactFormSuccess.png";
+import employeeFeedbacks from "./static/images/employeeFeedbacks.png";
+import invitationForm from "./static/images/invitationForm.png";
+import emailPreview from "./static/images/emailPreview.png";
+import invitationSuccess from "./static/images/invitationSuccess.png";
+import rightPanel from "./static/images/rightPanel.png";
 
 import {
-  Appear,
   Box,
-  CodePane,
   CodeSpan,
   Deck,
   FlexBox,
   FullScreen,
-  Grid,
   Heading,
   Image,
   ListItem,
-  Markdown,
-  Notes,
-  OrderedList,
   Progress,
   Slide,
-  SpectacleLogo,
-  Stepper,
   Text,
   UnorderedList,
-  indentNormalizer,
 } from "spectacle";
 
 // SPECTACLE_CLI_THEME_START
@@ -52,48 +51,6 @@ const template = () => (
 );
 // SPECTACLE_CLI_TEMPLATE_END
 
-const formidableLogo =
-  "https://avatars2.githubusercontent.com/u/5078602?s=280&v=4";
-
-const cppCodeBlock = indentNormalizer(`
-#include <iostream>
-#include <cstdlib>
-#include <sstream>
-#include <pthread.h>
-struct thread_data_t
-{
-   int  thread_id;
-   std::string message;
-};
-void *print_thread_message(void *thread_arg)
-{
-   struct thread_data_t *thread_data;
-   thread_data = (struct thread_data_t *) thread_arg;
-   cout << "Thread ID: " << thread_data->thread_id;
-   cout << "Message: " << thread_data->message << endl;
-   pthread_exit(NULL);
-}
-int main()
-{
-  pthread_t threads[NUM_THREADS];
-  struct thread_data_t thread_data[NUM_THREADS];
-  for (int i = 0; i < NUM_THREADS; i++)
-  {
-    auto curried_add = [](int x) -> function<int(int)> { return [=](int y) { return x + y; }; };
-    auto answer = curried_add(i)(5);
-    std::stringstream message;
-    message << "The math result is " << answer << "!";
-    thread_data.thread_id = i;
-    thread_data.message = message.str();
-    int err = pthread_create(&threads, NULL, print_thread_message, (void *)&thread_data[i]);
-    if (err)
-    {
-      exit(-1)
-    }
-  }
-  return 0;
-}`);
-
 const Presentation = () => (
   <Deck theme={theme} template={template} transitionEffect="fade">
     <Slide backgroundColor="#f8f9fa">
@@ -103,7 +60,7 @@ const Presentation = () => (
         </Heading>
         <Text color="black" textAlign="center">
           Nasza aplikacja służy do zbierania i przetrzymywania feedbacków o
-          pracownikach naszej firmy. Feedbacki są zbierane z firm zewnętrznych
+          pracownikach naszej firmy. Feedbacki są zbierane z firm zewnętrznych,
           jak i naszej firmy.
         </Text>
       </FlexBox>
@@ -161,96 +118,161 @@ const Presentation = () => (
       <Heading margin="0px" color="#ff5a00">
         Lista kontaktów
       </Heading>
-
-      <Text>
-        Code Blocks now auto size and scroll when there is an overflow of
-        content! They also auto-wrap longer lines.
-      </Text>
-    </Slide>
-    <Slide>
-      <Heading>Animated Elements</Heading>
-      <OrderedList>
-        <Appear elementNum={0}>
-          <ListItem>Elements can animate in!</ListItem>
-        </Appear>
-        <Appear elementNum={2}>
-          <ListItem>
-            Just identify the order with the prop{" "}
-            <CodeSpan>elementNum</CodeSpan>!
-          </ListItem>
-        </Appear>
-        <Appear elementNum={1}>
-          <ListItem>Out of order</ListItem>
-        </Appear>
-      </OrderedList>
-    </Slide>
-    <Slide>
-      <FlexBox>
-        <Text>These</Text>
-        <Text>Text</Text>
-        <Text color="secondary">Items</Text>
-        <Text fontWeight="bold">Flex</Text>
+      <FlexBox height="100%" flexDirection="row" alignItems="start">
+        <Image src={contactList} width="70%" />
+        <Text
+          fontSize="32px"
+          color="black"
+          textAlign="left"
+          margin="0"
+          padding="0"
+        >
+          Jest to komponent, który służący do przechowywania naszych kontaktów
+          do których będziemy chcieli wysyłać zaproszenia do wystawiania opinii
+          o danym pracowniku
+        </Text>
       </FlexBox>
-      <Grid gridTemplateColumns="1fr 2fr" gridColumnGap={15}>
-        <Box backgroundColor="primary">
-          <Text color="secondary">Single-size Grid Item</Text>
-        </Box>
-        <Box backgroundColor="secondary">
-          <Text>Double-size Grid Item</Text>
-        </Box>
-      </Grid>
-      <Grid
-        gridTemplateColumns="1fr 1fr 1fr"
-        gridTemplateRows="1fr 1fr 1fr"
-        alignItems="center"
-        justifyContent="center"
-        gridRowGap={1}
+    </Slide>
+    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista kontaktów
+      </Heading>
+      <FlexBox height="100%" flexDirection="row" alignItems="start">
+        <Image src={contactForm} height="60%" />
+        <Text
+          fontSize="30px"
+          color="black"
+          textAlign="left"
+          margin="0"
+          padding="0"
+        >
+          W prawym górnym rogu znajduje się przycisk do otwarcia formularza,
+          który umożliwia nam dodanie kontaktu do naszej listy.
+        </Text>
+      </FlexBox>
+    </Slide>
+    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista kontaktów
+      </Heading>
+      <FlexBox height="100%" flexDirection="row" alignItems="start">
+        <Image src={contactFormSuccess} width="80%" />
+        <Text
+          fontSize="26px"
+          color="black"
+          textAlign="left"
+          margin="0"
+          padding="0"
+        >
+          Po poprawnym dodaniu kontaktu wyświetli nam się komunikat na górze
+          strony, informujący nas o sukcesie.
+        </Text>
+      </FlexBox>
+    </Slide>
+    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista feedbacków
+      </Heading>
+      <FlexBox height="100%" flexDirection="row" alignItems="start">
+        <Image src={employeeFeedbacks} width="80%" />
+        <Text
+          fontSize="20px"
+          color="black"
+          textAlign="left"
+          margin="0"
+          padding="0"
+        >
+          Po wybraniu pracownika który nas interesuje, przechodzimy do widoku
+          jego feedbacków. Na tym widoku mamy wgląd do wszystkich feedbacków
+          które dany pracownik otrzymał do tej pory. Możemy też stworzyć nowe
+          zaproszenie do wystawienia oceny
+        </Text>
+      </FlexBox>
+    </Slide>
+    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista feedbacków
+      </Heading>
+      <FlexBox height="100%" flexDirection="row" alignItems="start">
+        <Image src={invitationForm} height="70%" />
+        <Text
+          fontSize="26px"
+          color="black"
+          textAlign="left"
+          margin="0"
+          padding="0"
+        >
+          W formularzu wpisujemy potrzebne informacje oraz wybieramy adresatów
+          do któych chcemy wysłać zaproszenie na temat danego pracownika. W
+          liście adresatów możemy wybrać osobę z naszej listy kontaktów lub z
+          listy pracowników. Jeżeli osoba do której chcemy wysłać prośbę o
+          wystawienie feedbacku nie ma na żadnej liście, możemy ją bezpośrednio
+          dodać z tego formularza po naciśnięciu przycisku dodaj kontakt.
+        </Text>
+      </FlexBox>
+    </Slide>
+    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista feedbacków
+      </Heading>
+      <FlexBox height="100%" flexDirection="row" alignItems="start">
+        <Image src={emailPreview} height="55%" />
+        <Text
+          fontSize="26px"
+          color="black"
+          textAlign="left"
+          margin="0"
+          padding="0"
+        >
+          Z pozycji formularza możemy włączyć podgląd maila, który zostanie
+          wysłany do wcześniej wybranych przez nas adresatów. Na szablonie
+          znajdziemy informacje o użytkownik, który chce wysłać maila, o
+          pracowniku, którego chcemy ocenić oraz nazwę projektu w którym brał
+          udział. Taki mail zostanie wysłany do wszystkich adresatów których
+          zaznaczymy.
+        </Text>
+      </FlexBox>
+    </Slide>
+    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista feedbacków
+      </Heading>
+      <FlexBox
+        height="100%"
+        flexDirection="column"
+        alignItems="flex-start"
+        justifyContent="flex-start"
       >
-        {Array(9)
-          .fill("")
-          .map((_, index) => (
-            <FlexBox paddingTop={0} key={`formidable-logo-${index}`} flex={1}>
-              <Image src={formidableLogo} width={100} />
-            </FlexBox>
-          ))}
-      </Grid>
+        <Image src={invitationSuccess} width="100%" marginTop="60px" />
+        <Text
+          fontSize="26px"
+          color="black"
+          textAlign="left"
+          margin="0px"
+          padding="0px"
+          marginTop="60px"
+        >
+          Po wysyłce maila ukaże nam się wiadomość na górze strony informująca
+          nas o tym, że udało się pomyślnie stworzyć zaproszenie oraz link,
+          który otworzy nam panel w którym bedziemi mieli informacje o danym
+          zaproszeniu.
+        </Text>
+      </FlexBox>
     </Slide>
-    <Slide>
-      <Markdown>
-        {`
-          # Layout Tables in Markdown
-          | Browser         | Supported | Versions |
-          |-----------------|-----------|----------|
-          | Chrome          | Yes       | Last 2   |
-          | Firefox         | Yes       | Last 2   |
-          | Opera           | Yes       | Last 2   |
-          | Edge (EdgeHTML) | No        |          |
-          | IE 11           | No        |          |
-        `}
-      </Markdown>
+    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista feedbacków
+      </Heading>
+      <FlexBox height="100%" flexDirection="row" alignItems="flex-start">
+        <Image src={rightPanel} width="70%" />
+        <Text
+          fontSize="26px"
+          color="black"
+          textAlign="left"
+          marginTop="0px"
+        ></Text>
+      </FlexBox>
     </Slide>
-    <Markdown containsSlides>
-      {`
-        ### Even write multiple slides in Markdown
-        > Wonderfully formatted quotes
-        1. Even create
-        2. Lists in Markdown
-        - Or Unordered Lists
-        - Too!!
-        Notes: These are notes
-        ---
-        ### This slide was also generated in Markdown!
-        \`\`\`jsx
-        const evenCooler = "is that you can do code in Markdown";
-        // You can even specify the syntax type!
-        \`\`\`
-        ### A slide can have multiple code blocks too.
-        \`\`\`c
-        char[] someString = "Popular languages like C too!";
-        \`\`\`
-        Notes: These are more notes
-      `}
-    </Markdown>
   </Deck>
 );
 
