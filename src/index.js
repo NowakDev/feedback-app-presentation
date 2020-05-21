@@ -98,11 +98,7 @@ const Presentation = () => (
   <Deck theme={theme} template={template} transitionEffect="fade">
     <Slide backgroundColor="#f8f9fa">
       <FlexBox height="100%">
-        <Image
-          color="#ff5a00"
-          src="/images/feedback-app-logo2.svg"
-          size={500}
-        />
+        <Image src="/images/feedback-app-logo2.svg" size={500} />
       </FlexBox>
     </Slide>
     <Slide>
@@ -124,32 +120,18 @@ const Presentation = () => (
         </p>
       </Notes>
     </Slide>
-    <Slide
-      backgroundColor="tertiary"
-      backgroundImage="url(https://github.com/FormidableLabs/dogs/blob/master/beau.jpg?raw=true)"
-      backgroundOpacity={0.5}
-    >
-      <Heading>Custom Backgrounds</Heading>
-      <UnorderedList>
-        <ListItem>
-          <CodeSpan>backgroundColor</CodeSpan>
-        </ListItem>
-        <ListItem>
-          <CodeSpan>backgroundImage</CodeSpan>
-        </ListItem>
-        <ListItem>
-          <CodeSpan>backgroundOpacity</CodeSpan>
-        </ListItem>
-        <ListItem>
-          <CodeSpan>backgroundSize</CodeSpan>
-        </ListItem>
-        <ListItem>
-          <CodeSpan>backgroundPosition</CodeSpan>
-        </ListItem>
-        <ListItem>
-          <CodeSpan>backgroundRepeat</CodeSpan>
-        </ListItem>
-      </UnorderedList>
+    <Slide backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Główny widok - lista pracowników
+      </Heading>
+      <FlexBox display="flex" width="100%" justifyContent="space-around">
+        <Image src="/images/feedback-app-logo2.svg" size={500} />
+        <Box size={500} width={800}>
+          <Text textAlign="center" fontSize="20px" color="black">
+            Główny widok - lista pracowników
+          </Text>
+        </Box>
+      </FlexBox>
     </Slide>
     <Slide transitionEffect="slide">
       <Heading>Code Blocks</Heading>
