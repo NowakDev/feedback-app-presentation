@@ -1,28 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import contactList from "./static/images/contactList.png";
+import contactForm from "./static/images/contactForm.png";
+import contactFormSuccess from "./static/images/contactFormSuccess.png";
+import employeeFeedbacks from "./static/images/employeeFeedbacks.png";
+import invitationForm from "./static/images/invitationForm.png";
+import emailPreview from "./static/images/emailPreview.png";
+import invitationSuccess from "./static/images/invitationSuccess.png";
+import rightPanel from "./static/images/rightPanel.png";
 
 import {
-  Appear,
   Box,
-  CodePane,
   CodeSpan,
   Deck,
   FlexBox,
   FullScreen,
-  Grid,
   Heading,
   Image,
   ListItem,
-  Markdown,
-  Notes,
-  OrderedList,
   Progress,
   Slide,
-  SpectacleLogo,
-  Stepper,
   Text,
   UnorderedList,
-  indentNormalizer,
 } from "spectacle";
 
 import logo from "./static/images/feedback-app-logo2.svg";
@@ -55,53 +54,11 @@ const template = () => (
       <FullScreen color="black" />
     </Box>
     <Box padding="1em">
-      <Progress />
+      <Progress color="#ff5a00" />
     </Box>
   </FlexBox>
 );
 // SPECTACLE_CLI_TEMPLATE_END
-
-const formidableLogo =
-  "https://avatars2.githubusercontent.com/u/5078602?s=280&v=4";
-
-const cppCodeBlock = indentNormalizer(`
-#include <iostream>
-#include <cstdlib>
-#include <sstream>
-#include <pthread.h>
-struct thread_data_t
-{
-   int  thread_id;
-   std::string message;
-};
-void *print_thread_message(void *thread_arg)
-{
-   struct thread_data_t *thread_data;
-   thread_data = (struct thread_data_t *) thread_arg;
-   cout << "Thread ID: " << thread_data->thread_id;
-   cout << "Message: " << thread_data->message << endl;
-   pthread_exit(NULL);
-}
-int main()
-{
-  pthread_t threads[NUM_THREADS];
-  struct thread_data_t thread_data[NUM_THREADS];
-  for (int i = 0; i < NUM_THREADS; i++)
-  {
-    auto curried_add = [](int x) -> function<int(int)> { return [=](int y) { return x + y; }; };
-    auto answer = curried_add(i)(5);
-    std::stringstream message;
-    message << "The math result is " << answer << "!";
-    thread_data.thread_id = i;
-    thread_data.message = message.str();
-    int err = pthread_create(&threads, NULL, print_thread_message, (void *)&thread_data[i]);
-    if (err)
-    {
-      exit(-1)
-    }
-  }
-  return 0;
-}`);
 
 const Presentation = () => (
   <Deck theme={theme} template={template} transitionEffect="fade">
@@ -112,14 +69,14 @@ const Presentation = () => (
         </FlexBox>
       </FlexBox>
     </Slide>
-    <Slide>
+    <Slide backgroundColor="#f8f9fa">
       <FlexBox height="100%" flexDirection="column">
         <Heading margin="0px" color="#ff5a00">
           Wstęp
         </Heading>
         <Text color="black" textAlign="center">
           Nasza aplikacja służy do zbierania i przetrzymywania feedbacków o
-          pracownikach naszej firmy. Feedbacki są zbierane z firm zewnętrznych
+          pracownikach naszej firmy. Feedbacki są zbierane z firm zewnętrznych,
           jak i naszej firmy.
         </Text>
       </FlexBox>
@@ -199,6 +156,103 @@ const Presentation = () => (
     </Slide>
     <Slide backgroundColor="#f8f9fa">
       <Heading margin="0px" color="#ff5a00">
+        Lista kontaktów
+      </Heading>
+      <FlexBox flexDirection="row" alignItems="center">
+        <Text fontSize="24px" color="black" textAlign="justify">
+          Jest to komponent, który służący do przechowywania naszych kontaktów
+          do których będziemy chcieli wysyłać zaproszenia do wystawiania opinii
+          o danym pracowniku
+        </Text>
+        <Image src={contactList} width="60%" />
+      </FlexBox>
+    </Slide>
+    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista kontaktów
+      </Heading>
+      <FlexBox flexDirection="row" alignItems="center">
+        <Image src={contactForm} width="60%" />
+        <Text fontSize="24px" color="black" textAlign="justify">
+          W prawym górnym rogu znajduje się przycisk do otwarcia formularza,
+          który umożliwia nam dodanie kontaktu do naszej listy.
+        </Text>
+      </FlexBox>
+    </Slide>
+    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista kontaktów
+      </Heading>
+      <FlexBox flexDirection="row" alignItems="center">
+        <Text fontSize="24px" color="black" textAlign="justify">
+          Po poprawnym dodaniu kontaktu wyświetli nam się komunikat na górze
+          strony, informujący nas o sukcesie.
+        </Text>
+        <Image src={contactFormSuccess} width="60%" />
+      </FlexBox>
+    </Slide>
+    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista feedbacków
+      </Heading>
+      <FlexBox flexDirection="row" alignItems="center">
+        <Image src={employeeFeedbacks} width="60%" />
+        <Text fontSize="24px" color="black" textAlign="justify">
+          Po wybraniu pracownika który nas interesuje, przechodzimy do widoku
+          jego feedbacków. Na tym widoku mamy wgląd do wszystkich feedbacków
+          które dany pracownik otrzymał do tej pory. Możemy też stworzyć nowe
+          zaproszenie do wystawienia oceny
+        </Text>
+      </FlexBox>
+    </Slide>
+    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista feedbacków
+      </Heading>
+      <FlexBox flexDirection="row" alignItems="center">
+        <Text fontSize="24px" color="black" textAlign="justify">
+          W formularzu wpisujemy potrzebne informacje oraz wybieramy adresatów
+          do któych chcemy wysłać zaproszenie na temat danego pracownika. W
+          liście adresatów możemy wybrać osobę z naszej listy kontaktów lub z
+          listy pracowników. Jeżeli osoba do której chcemy wysłać prośbę o
+          wystawienie feedbacku nie ma na żadnej liście, możemy ją bezpośrednio
+          dodać z tego formularza po naciśnięciu przycisku dodaj kontakt.
+        </Text>
+        <Image src={invitationForm} width="60%" />
+      </FlexBox>
+    </Slide>
+    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista feedbacków
+      </Heading>
+      <FlexBox alignItems="center">
+        <Image src={emailPreview} width="60%" />
+        <Text fontSize="24px" color="black" textAlign="justify">
+          Z pozycji formularza możemy włączyć podgląd maila, który zostanie
+          wysłany do wcześniej wybranych przez nas adresatów. Na szablonie
+          znajdziemy informacje o użytkownik, który chce wysłać maila, o
+          pracowniku, którego chcemy ocenić oraz nazwę projektu w którym brał
+          udział. Taki mail zostanie wysłany do wszystkich adresatów których
+          zaznaczymy.
+        </Text>
+      </FlexBox>
+    </Slide>
+    <Slide backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista feedbacków
+      </Heading>
+      <FlexBox>
+        <Text fontSize="24px" color="black" textAlign="justify">
+          Po wysyłce maila ukaże nam się wiadomość na górze strony informująca
+          nas o tym, że udało się pomyślnie stworzyć zaproszenie oraz link,
+          który otworzy nam panel w którym bedziemi mieli informacje o danym
+          zaproszeniu.
+        </Text>
+        <Image src={invitationSuccess} width="60%" />
+      </FlexBox>
+    </Slide>
+    <Slide backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
         Ocena pracownika
       </Heading>
       <FlexBox display="flex" width="100%" justifyContent="space-around">
@@ -246,142 +300,20 @@ const Presentation = () => (
         </Text>
       </FlexBox>
     </Slide>
-    <Slide transitionEffect="slide">
-      <Heading>Code Blocks</Heading>
-      <Stepper
-        defaultValue={[]}
-        values={[
-          [1, 1],
-          [23, 25],
-          [40, 42],
-        ]}
-      >
-        {(value, step) => (
-          <Box position="relative">
-            <CodePane
-              highlightStart={value[0]}
-              highlightEnd={value[1]}
-              fontSize={18}
-              language="cpp"
-              autoFillHeight
-            >
-              {cppCodeBlock}
-            </CodePane>
-
-            <Box
-              position="absolute"
-              bottom="0rem"
-              left="0rem"
-              right="0rem"
-              bg="black"
-            >
-              {/* This notes container won't appear for step 0 */}
-
-              {step === 1 && (
-                <Text fontSize="1.5rem" margin="0rem">
-                  This is a note!
-                </Text>
-              )}
-
-              {step === 2 && (
-                <Text fontSize="1.5rem" margin="0rem">
-                  You can use the stepper state to render whatever you like as
-                  you step through the code.
-                </Text>
-              )}
-            </Box>
-          </Box>
-        )}
-      </Stepper>
-      <Text>
-        Code Blocks now auto size and scroll when there is an overflow of
-        content! They also auto-wrap longer lines.
-      </Text>
-    </Slide>
-    <Slide>
-      <Heading>Animated Elements</Heading>
-      <OrderedList>
-        <Appear elementNum={0}>
-          <ListItem>Elements can animate in!</ListItem>
-        </Appear>
-        <Appear elementNum={2}>
-          <ListItem>
-            Just identify the order with the prop{" "}
-            <CodeSpan>elementNum</CodeSpan>!
-          </ListItem>
-        </Appear>
-        <Appear elementNum={1}>
-          <ListItem>Out of order</ListItem>
-        </Appear>
-      </OrderedList>
-    </Slide>
-    <Slide>
-      <FlexBox>
-        <Text>These</Text>
-        <Text>Text</Text>
-        <Text color="secondary">Items</Text>
-        <Text fontWeight="bold">Flex</Text>
+    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista feedbacków
+      </Heading>
+      <FlexBox height="100%" flexDirection="row" alignItems="flex-start">
+        <Image src={rightPanel} width="70%" />
+        <Text
+          fontSize="26px"
+          color="black"
+          textAlign="left"
+          marginTop="0px"
+        ></Text>
       </FlexBox>
-      <Grid gridTemplateColumns="1fr 2fr" gridColumnGap={15}>
-        <Box backgroundColor="primary">
-          <Text color="secondary">Single-size Grid Item</Text>
-        </Box>
-        <Box backgroundColor="secondary">
-          <Text>Double-size Grid Item</Text>
-        </Box>
-      </Grid>
-      <Grid
-        gridTemplateColumns="1fr 1fr 1fr"
-        gridTemplateRows="1fr 1fr 1fr"
-        alignItems="center"
-        justifyContent="center"
-        gridRowGap={1}
-      >
-        {Array(9)
-          .fill("")
-          .map((_, index) => (
-            <FlexBox paddingTop={0} key={`formidable-logo-${index}`} flex={1}>
-              <Image src={formidableLogo} width={100} />
-            </FlexBox>
-          ))}
-      </Grid>
     </Slide>
-    <Slide>
-      <Markdown>
-        {`
-          # Layout Tables in Markdown
-          | Browser         | Supported | Versions |
-          |-----------------|-----------|----------|
-          | Chrome          | Yes       | Last 2   |
-          | Firefox         | Yes       | Last 2   |
-          | Opera           | Yes       | Last 2   |
-          | Edge (EdgeHTML) | No        |          |
-          | IE 11           | No        |          |
-        `}
-      </Markdown>
-    </Slide>
-    <Markdown containsSlides>
-      {`
-        ### Even write multiple slides in Markdown
-        > Wonderfully formatted quotes
-        1. Even create
-        2. Lists in Markdown
-        - Or Unordered Lists
-        - Too!!
-        Notes: These are notes
-        ---
-        ### This slide was also generated in Markdown!
-        \`\`\`jsx
-        const evenCooler = "is that you can do code in Markdown";
-        // You can even specify the syntax type!
-        \`\`\`
-        ### A slide can have multiple code blocks too.
-        \`\`\`c
-        char[] someString = "Popular languages like C too!";
-        \`\`\`
-        Notes: These are more notes
-      `}
-    </Markdown>
   </Deck>
 );
 
