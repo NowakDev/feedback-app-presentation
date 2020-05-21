@@ -98,34 +98,76 @@ const Presentation = () => (
   <Deck theme={theme} template={template} transitionEffect="fade">
     <Slide backgroundColor="#f8f9fa">
       <FlexBox height="100%">
-        <Image src="/images/feedback-app-logo2.svg" size={500} />
+        <Image src="" size={500} />
       </FlexBox>
     </Slide>
     <Slide>
       <FlexBox height="100%" flexDirection="column">
-        <Heading margin="0px" fontSize="150px">
-          ✨<i>Spectacle</i> ✨
+        <Heading margin="0px" color="#ff5a00">
+          Wstęp
         </Heading>
-        <Heading margin="0px" fontSize="h2">
-          A ReactJS Presentation Library
-        </Heading>
-        <Heading margin="0px 32px" color="primary" fontSize="h3">
-          Where you can write your decks in JSX, Markdown, or MDX!
-        </Heading>
+        <Text color="black" textAlign="center">
+          Nasza aplikacja służy do zbierania i przetrzymywania feedbacków o
+          pracownikach naszej firmy. Feedbacki są zbierane z firm zewnętrznych
+          jak i naszej firmy.
+        </Text>
       </FlexBox>
-      <Notes>
-        <p>
-          Notes are shown in presenter mode. Open up
-          localhost:3000/?presenterMode=true to see them.
-        </p>
-      </Notes>
+    </Slide>
+    <Slide backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Technologie
+      </Heading>
+      <FlexBox
+        height="100%"
+        flexDirection="row"
+        justifyContent="space-around"
+        alignItems="start"
+      >
+        <div>
+          <Text color="black">Frontend</Text>
+          <UnorderedList>
+            <ListItem color="black">
+              <CodeSpan>ReactJS</CodeSpan>
+            </ListItem>
+            <ListItem color="black">
+              <CodeSpan>React hooks</CodeSpan>
+            </ListItem>
+            <ListItem color="black">
+              <CodeSpan>Storybook</CodeSpan>
+            </ListItem>
+            <ListItem color="black">
+              <CodeSpan>Fabric-UI</CodeSpan>
+            </ListItem>
+            <ListItem color="black">
+              <CodeSpan>TypeScript</CodeSpan>
+            </ListItem>
+          </UnorderedList>
+        </div>
+        <div>
+          <Text color="black">Backend</Text>
+          <UnorderedList>
+            <ListItem color="black">
+              <CodeSpan>Nodejs</CodeSpan>
+            </ListItem>
+            <ListItem color="black">
+              <CodeSpan>ExpressJS</CodeSpan>
+            </ListItem>
+            <ListItem color="black">
+              <CodeSpan>PassportJS</CodeSpan>
+            </ListItem>
+            <ListItem color="black">
+              <CodeSpan>NestJS</CodeSpan>
+            </ListItem>
+          </UnorderedList>
+        </div>
+      </FlexBox>
     </Slide>
     <Slide backgroundColor="#f8f9fa">
       <Heading margin="0px" color="#ff5a00">
         Główny widok - lista pracowników
       </Heading>
       <FlexBox display="flex" width="100%" justifyContent="space-around">
-        <Image src="/images/feedback-app-logo2.svg" size={500} />
+        <Image src="" size={500} />
         <Box size={500} width={800}>
           <Text textAlign="center" fontSize="20px" color="black">
             Główny widok - lista pracowników
