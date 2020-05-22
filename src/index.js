@@ -81,19 +81,19 @@ const Presentation = () => (
         Wstęp
       </Heading>
       <FlexBox flexDirection="column">
-        <Text color="black" textAlign="left">
-          Głównym celem aplikacji jest przyśpieszenie procesu wystawiania próśb
+        <Text color="black" textAlign="justify">
+          Głównym celem aplikacji jest przyspieszenie procesu wystawiania próśb
           o opinię na temat pracowników Billennium, jak również szybszego wglądu
           do zebranych odpowiedzi. Feedbacki są zbierane i opisane w jednym
-          miejscu co umożliwia nam szybki dostęp. Wszystko w aplikacji jest
-          dostępne w jasny i przejrzysty sposób.
+          miejscu co umożliwia nam łatwy do nich dostęp. Wszystko w aplikacji
+          jest dostępne w jasny i przejrzysty sposób.
         </Text>
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
         <Image width="150px" src={billennium} />
       </FlexBox>
     </Slide>
-    <Slide backgroundColor="#f8f9fa" fontSize="22px">
+    <Slide backgroundColor="#f8f9fa">
       <Heading margin="0px" color="#ff5a00">
         Technologie
       </Heading>
@@ -138,6 +138,9 @@ const Presentation = () => (
             <ListItem color="black">
               <CodeSpan>NestJS</CodeSpan>
             </ListItem>
+            <ListItem color="black">
+              <CodeSpan>TypeORM</CodeSpan>
+            </ListItem>
           </UnorderedList>
         </div>
       </FlexBox>
@@ -150,7 +153,7 @@ const Presentation = () => (
         Główny widok - lista pracowników
       </Heading>
       <FlexBox>
-        <Image src={mainView} width="70%" />
+        <Image src={mainView} width="65%" />
         <Text
           fontSize="20px"
           color="black"
@@ -161,7 +164,7 @@ const Presentation = () => (
           Po udanym logowaniu jesteśmy przekierowywani na główny widok aplikacji
           - listę pracowników. Lista odzwierciedla hierarchię aktualnie
           zalogowanego użytkownika. Za pomocą pola do wyszukiwania możemy
-          wyszukać pracownika i klikając na niego przejść do jego listy
+          znaleźć pracownika i klikając na niego przejść do jego listy
           feedback'ów co pokażemy w dalszej części prezentacji. Po lewej stronie
           widzimy także menu nawigacyjne do przechodzenia pomiędzy listami a po
           kliknięciu w pole 'Wyślij zaproszenie' otwiera się panel do jego
@@ -183,7 +186,7 @@ const Presentation = () => (
           opinii o danym pracowniku. W prawym górnym rogu znajduje się pasek do
           wyszukiwania który umożliwia nam przeszukanie naszej listy.
         </Text>
-        <Image src={contactList} width="70%" />
+        <Image src={contactList} width="65%" />
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
         <Image width="150px" src={billennium} />
@@ -213,7 +216,7 @@ const Presentation = () => (
           Po poprawnym dodaniu kontaktu na górze strony wyświetli się komunikat
           informujący nas o sukcesie.
         </Text>
-        <Image src={contactFormSuccess} width="70%" />
+        <Image src={contactFormSuccess} width="65%" />
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
         <Image width="150px" src={billennium} />
@@ -225,7 +228,7 @@ const Presentation = () => (
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
         <Image src={employeeFeedbacks} width="70%" />
-        <Text fontSize="22px" color="black" textAlign="left" lineHeight="30px">
+        <Text fontSize="20px" color="black" textAlign="left" lineHeight="30px">
           Po wybraniu pracownika z listy, przechodzimy do widoku jego
           feedbacków. Na tym widoku mamy wgląd do wszystkich feedbacków które
           dany pracownik otrzymał do tej pory.
@@ -242,7 +245,7 @@ const Presentation = () => (
       <FlexBox>
         <Image src={statuses} width="150%" />
         <Text
-          fontSize="22px"
+          fontSize="20px"
           color="black"
           margin="0px 16px"
           textAlign="left"
@@ -287,7 +290,7 @@ const Presentation = () => (
         Lista feedbacków
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
-        <Text fontSize="22px" color="black" textAlign="left">
+        <Text fontSize="20px" color="black" textAlign="left">
           Aby stworzyć nowe zaproszenie należy kliknąć "Stwórz zaproszenie".
           Otworzy nam się formularzu w którym wpisujemy potrzebne informacje
           oraz wybieramy adresatów do któych chcemy wysłać zaproszenie na temat
@@ -308,7 +311,7 @@ const Presentation = () => (
         Lista feedbacków
       </Heading>
       <FlexBox alignItems="center">
-        <Image src={emailPreview} width="70%" />
+        <Image src={emailPreview} width="65%" />
         <Text
           fontSize="20px"
           color="black"
@@ -351,7 +354,7 @@ const Presentation = () => (
         Lista feedbacków
       </Heading>
       <FlexBox>
-        <Image src={openResponsePanelList} width="70%" />
+        <Image src={openResponsePanelList} width="65%" />
         <Text fontSize="20px" color="black" textAlign="left" lineHeight="30px">
           Panel otwiera nam się też poprzez kliknięcie na dany feedback
         </Text>
@@ -367,11 +370,12 @@ const Presentation = () => (
       <FlexBox alignItems="center">
         <Text fontSize="20px" color="black" textAlign="left" lineHeight="30px">
           Po wejściu w szczegóły zaproszenia zobaczymy panel boczny, w którym
-          mamy podstawowe informacje na jego temat: kiedy zostało utworzone,
-          kiedy otrzymaliśmy ostatnią odpowiedź, jakiej firmy i jakiego projektu
-          dotyczy oraz listę wszystkich osób, do których zostało wysłane.
+          mamy podstawowe informacje na jego temat: status, kiedy zostało
+          utworzone, kiedy otrzymaliśmy ostatnią odpowiedź, jakiej firmy i
+          jakiego projektu dotyczy oraz listę wszystkich osób, do których
+          zostało wysłane.
         </Text>
-        <Image src={rightPanel} width="70%" />
+        <Image src={rightPanel} width="65%" />
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
         <Image width="150px" src={billennium} />
@@ -382,7 +386,7 @@ const Presentation = () => (
         Lista feedbacków
       </Heading>
       <FlexBox alignItems="center">
-        <Image src={leftPanel} width="70%" />
+        <Image src={leftPanel} width="65%" />
         <Text fontSize="20px" color="black" textAlign="left" lineHeight="30px">
           Po kliknięciu w adresata, który oddał feedback wysunie się kolejny
           panel z jego szczegółami. Zobaczymy na nim odpowiedzi na pytania z
@@ -406,7 +410,7 @@ const Presentation = () => (
           okno z formularzem oceny pracownika. Strona jest w pełni responsywna,
           co pozwoli na wypełnienie formularza na dowolnym urządzeniu.
         </Text>
-        <Image src={evaluationPage} width="70%" />
+        <Image src={evaluationPage} width="65%" />
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
         <Image width="150px" src={billennium} />
@@ -416,7 +420,7 @@ const Presentation = () => (
       <Heading margin="0px" color="#ff5a00">
         Ocena pracownika - widok mobile
       </Heading>
-      <FlexBox height="520px">
+      <FlexBox height="500px">
         <Image src={evaluationPageMobile1} height="99%" />
         <Image src={evaluationPageMobile2} height="100%" />
       </FlexBox>
@@ -428,7 +432,7 @@ const Presentation = () => (
       <Heading margin="0px" color="#ff5a00">
         Ocena pracownika - widok tablet
       </Heading>
-      <FlexBox height="520px">
+      <FlexBox height="500px">
         <Image src={evaluationPageTablet1} height="99%" />
         <Image src={evaluationPageTablet2} height="100%" />
       </FlexBox>
@@ -441,7 +445,7 @@ const Presentation = () => (
         Strona podziękowań
       </Heading>
       <FlexBox display="flex" width="100%" justifyContent="space-around">
-        <Image src={thankYouPage} width="70%" />
+        <Image src={thankYouPage} width="65%" />
         <Text
           fontSize="20px"
           color="black"
@@ -469,6 +473,14 @@ const Presentation = () => (
           angielski aby osoby z innych krajów mogły swobodnie korzystać z
           aplikacji. Planowana jest też integracja z naszym systemem DCMT.
         </Text>
+      </FlexBox>
+    </Slide>
+    <Slide backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Dziękujemy za uwagę :)
+      </Heading>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
       </FlexBox>
     </Slide>
   </Deck>
