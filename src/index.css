@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Billennium-Regular";
+  font-style: normal;
+  src: local("Billennium-Regular"),
+    url(./fonts/Billennium-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Billennium-SemiBold";
+  font-style: normal;
+  src: local("Billennium-SemiBold"),
+    url(./fonts/Billennium-SemiBold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Billennium-CompressedBold";
+  font-style: normal;
+  src: local("Billennium-CompressedBold"),
+    url(./fonts/Billennium-CompressedBold.otf) format("opentype");
+}
