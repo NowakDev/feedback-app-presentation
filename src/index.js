@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import contactList from "./static/images/contactList.png";
-import contactForm from "./static/images/contactForm.png";
-import contactFormSuccess from "./static/images/contactFormSuccess.png";
-import employeeFeedbacks from "./static/images/employeeFeedbacks.png";
-import invitationForm from "./static/images/invitationForm.png";
-import emailPreview from "./static/images/emailPreview.png";
-import invitationSuccess from "./static/images/invitationSuccess.png";
+import contactForm from "./static/images/contactFormAddContact.gif";
+import contactFormSuccess from "./static/images/contactListSuccess.png";
+import addInvitation from "./static/images/addInvitation.gif";
+import employeeFeedbacks from "./static/images/feedbackList.gif";
+import emailPreview from "./static/images/invitationEmailPreview.png";
+import linkToPanel from "./static/images/linkToPanel.gif";
 import rightPanel from "./static/images/rightPanel.png";
 import leftPanel from "./static/images/leftPanel.png";
 import statuses from "./static/images/statuses.png";
@@ -28,7 +28,7 @@ import {
 } from "spectacle";
 
 import logo from "./static/images/feedback-app-logo2.svg";
-import mainView from "./static/images/mainview.png";
+import mainView from "./static/images/employeeList.png";
 import evaluationPage from "./static/images/evaluationPage.png";
 import thankYouPage from "./static/images/thankYouPage.png";
 import evaluationPageMobile1 from "./static/images/evaluationPage-mobile-1.png";
@@ -190,7 +190,7 @@ const Presentation = () => (
         Lista kontaktów
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
-        <Image src={contactForm} width="60%" />
+        <Image src={contactForm} width="70%" />
         <Text fontSize="22px" color="black" textAlign="justify">
           Pod paskiem do wyszukiwania kontaków znajduje się przycisk "Dodaj
           kontakt" do otwarcia formularza, który umożliwia nam dodanie nowego
@@ -235,9 +235,43 @@ const Presentation = () => (
         >
           Po wybraniu pracownika z listy, przechodzimy do widoku jego
           feedbacków. Na tym widoku mamy wgląd do wszystkich feedbacków które
-          dany pracownik otrzymał do tej pory. Możemy też stworzyć nowe
-          zaproszenie do wystawienia oceny o danym pracowniku klikając przycisk
-          "Stwórz zaproszenie".
+          dany pracownik otrzymał do tej pory.
+        </Text>
+      </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
+      </FlexBox>
+    </Slide>
+    <Slide backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista feedbacków
+      </Heading>
+      <FlexBox>
+        <Image src={statuses} width="150%" />
+        <Text
+          fontSize="22px"
+          color="black"
+          margin="0px 16px"
+          textAlign="justify"
+          lineHeight="30px"
+        >
+          <p>
+            Statusy informują nas o tym w jakim stanie znajduje się aktualnie
+            dany feedback.
+          </p>
+          <br />
+          Partial mówi o tym, że na wybrany feedback odpowiedziała część z osób
+          poproszonych o wystawienie opinii.
+          <br />
+          Completed mówi o tym, że na wybrany feedback odpowiedzieli wszyscy z
+          proszonych o wystawienie opinii.
+          <br />
+          Pending mówi o tym, że na wybrany feedback nie otrzymaliśmy jeszcze
+          żadnej odpowiedzi, a status oczekiwania nie jest dłuższy niż 7 dni
+          <br />
+          NoAnswer mówi o tym, że na wybrany feedback nie otrzymaliśmy żadnej
+          odpowiedzi, a status oczekiwania jest dłuższy niż 7 dni
+          <br />
         </Text>
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
@@ -250,15 +284,17 @@ const Presentation = () => (
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
         <Text fontSize="22px" color="black" textAlign="justify">
-          Następnie otworzy nam się formularzu w którym wpisujemy potrzebne
-          informacje oraz wybieramy adresatów do któych chcemy wysłać
-          zaproszenie na temat danego pracownika. W liście adresatów możemy
-          wybrać osobę z naszej listy kontaktów lub z listy pracowników. Jeżeli
-          osoby do której chcemy wysłać prośbę o wystawienie feedbacku nie ma na
-          żadnej liście, możemy ją bezpośrednio dodać z tego formularza po
-          naciśnięciu przycisku "Dodaj kontakt".
+          Możemy też stworzyć nowe zaproszenie do wystawienia oceny o danym
+          pracowniku klikając przycisk "Stwórz zaproszenie". Otworzy nam się
+          formularzu w którym wpisujemy potrzebne informacje oraz wybieramy
+          adresatów do któych chcemy wysłać zaproszenie na temat danego
+          pracownika. W liście adresatów możemy wybrać osobę z naszej listy
+          kontaktów lub z listy pracowników. Jeżeli osoby do której chcemy
+          wysłać prośbę o wystawienie feedbacku nie ma na żadnej liście, możemy
+          ją bezpośrednio dodać z tego formularza po naciśnięciu przycisku
+          "Dodaj kontakt".
         </Text>
-        <Image src={invitationForm} width="70%" />
+        <Image src={addInvitation} width="70%" />
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
         <Image width="150px" src={billennium} />
@@ -306,48 +342,13 @@ const Presentation = () => (
           który otworzy nam panel. W panelu tym możemy znaleźć między innymi
           informacje odnośnie danego zaproszenia .
         </Text>
-        <Image src={leftPanel} width="70%" />
+        <Image src={linkToPanel} width="70%" />
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
         <Image width="150px" src={billennium} />
       </FlexBox>
     </Slide>
-    <Slide backgroundColor="#f8f9fa">
-      <Heading margin="0px" color="#ff5a00">
-        Lista feedbacków
-      </Heading>
-      <FlexBox>
-        <Image src={statuses} width="150%" />
-        <Text
-          fontSize="22px"
-          color="black"
-          margin="0px 16px"
-          textAlign="justify"
-          lineHeight="30px"
-        >
-          <p>
-            Statusy informują nas o tym w jakim stanie znajduje się aktualnie
-            dany feedback.
-          </p>
-          <br />
-          Partial mówi o tym, że na wybrany feedback odpowiedziała część z osób
-          poproszonych o wystawienie opinii.
-          <br />
-          Completed mówi o tym, że na wybrany feedback odpowiedzieli wszyscy z
-          proszonych o wystawienie opinii.
-          <br />
-          Pending mówi o tym, że na wybrany feedback nie otrzymaliśmy jeszcze
-          żadnej odpowiedzi, a status oczekiwania nie jest dłuższy niż 7 dni
-          <br />
-          NoAnswer mówi o tym, że na wybrany feedback nie otrzymaliśmy żadnej
-          odpowiedzi, a status oczekiwania jest dłuższy niż 7 dni
-          <br />
-        </Text>
-      </FlexBox>
-      <FlexBox height="100%" alignItems="flex-end">
-        <Image width="150px" src={billennium} />
-      </FlexBox>
-    </Slide>
+
     <Slide backgroundColor="#f8f9fa">
       <Heading margin="0px" color="#ff5a00">
         Ocena pracownika
