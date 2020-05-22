@@ -9,6 +9,7 @@ import emailPreview from "./static/images/emailPreview.png";
 import invitationSuccess from "./static/images/invitationSuccess.png";
 import rightPanel from "./static/images/rightPanel.png";
 import leftPanel from "./static/images/leftPanel.png";
+import statuses from "./static/images/statuses.png";
 
 import {
   Box,
@@ -76,9 +77,10 @@ const Presentation = () => (
           Wstęp
         </Heading>
         <Text color="black" textAlign="center">
-          Nasza aplikacja służy do zbierania i przetrzymywania feedbacków o
+          Nasza aplikacja służy do zbierania i przechowywania feedbacków o
           pracownikach naszej firmy. Feedbacki są zbierane z firm zewnętrznych,
-          jak i naszej firmy.
+          jak i z naszej firmy. Głównym celem aplikacji jest przyśpieszenie
+          procesu zbierania opinii o pracownikach.
         </Text>
       </FlexBox>
     </Slide>
@@ -116,7 +118,7 @@ const Presentation = () => (
           <Text color="black">Backend</Text>
           <UnorderedList>
             <ListItem color="black">
-              <CodeSpan>Nodejs</CodeSpan>
+              <CodeSpan>NodeJS</CodeSpan>
             </ListItem>
             <ListItem color="black">
               <CodeSpan>ExpressJS</CodeSpan>
@@ -143,7 +145,6 @@ const Presentation = () => (
           margin="22px"
           lineHeight="30px"
           textAlign="justify"
-          lineHeight="30px"
         >
           Po udanym logowaniu jesteśmy przekierowywani na główny widok aplikacji
           - listę pracowników. Lista odzwierciedla hierarchię aktualnie
@@ -162,14 +163,14 @@ const Presentation = () => (
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
         <Text
-          fontSize="22px"
+          fontSize="24px"
           color="black"
           textAlign="justify"
           lineHeight="30px"
         >
-          Jest to komponent, który służący do przechowywania naszych kontaktów
-          do których będziemy chcieli wysyłać zaproszenia do wystawiania opinii
-          o danym pracowniku
+          Jest to komponent, który służy w celu przechowywania naszych kontaktów
+          do których będziemy chcieli wysyłać zaproszenia na temat wystawienia
+          opinii o danym pracowniku.
         </Text>
         <Image src={contactList} width="70%" />
       </FlexBox>
@@ -197,13 +198,13 @@ const Presentation = () => (
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
         <Text
-          fontSize="22px"
+          fontSize="24px"
           color="black"
           textAlign="justify"
           lineHeight="30px"
         >
-          Po poprawnym dodaniu kontaktu wyświetli nam się komunikat na górze
-          strony, informujący nas o sukcesie.
+          Po poprawnym dodaniu kontaktu na górze strony wyświetli nam się
+          komunikat informujący nas o sukcesie.
         </Text>
         <Image src={contactFormSuccess} width="70%" />
       </FlexBox>
@@ -215,15 +216,15 @@ const Presentation = () => (
       <FlexBox flexDirection="row" alignItems="center">
         <Image src={employeeFeedbacks} width="70%" />
         <Text
-          fontSize="22px"
+          fontSize="24px"
           color="black"
           textAlign="justify"
           lineHeight="30px"
         >
-          Po wybraniu pracownika który nas interesuje, przechodzimy do widoku
-          jego feedbacków. Na tym widoku mamy wgląd do wszystkich feedbacków
-          które dany pracownik otrzymał do tej pory. Możemy też stworzyć nowe
-          zaproszenie do wystawienia oceny
+          Po wybraniu pracownika z listy, przechodzimy do widoku jego
+          feedbacków. Na tym widoku mamy wgląd do wszystkich feedbacków które
+          dany pracownik otrzymał do tej pory. Możemy też stworzyć nowe
+          zaproszenie do wystawienia oceny o danym pracowniku.
         </Text>
       </FlexBox>
     </Slide>
@@ -241,7 +242,7 @@ const Presentation = () => (
           W formularzu wpisujemy potrzebne informacje oraz wybieramy adresatów
           do któych chcemy wysłać zaproszenie na temat danego pracownika. W
           liście adresatów możemy wybrać osobę z naszej listy kontaktów lub z
-          listy pracowników. Jeżeli osoba do której chcemy wysłać prośbę o
+          listy pracowników. Jeżeli osoby do której chcemy wysłać prośbę o
           wystawienie feedbacku nie ma na żadnej liście, możemy ją bezpośrednio
           dodać z tego formularza po naciśnięciu przycisku dodaj kontakt.
         </Text>
@@ -264,8 +265,9 @@ const Presentation = () => (
           wysłany do wcześniej wybranych przez nas adresatów. Na szablonie
           znajdziemy informacje o użytkownik, który chce wysłać maila, o
           pracowniku, którego chcemy ocenić oraz nazwę projektu w którym brał
-          udział. Taki mail zostanie wysłany do wszystkich adresatów których
-          zaznaczymy.
+          udział. W miejscu napisu Odbiorco w docelowym mailu znajduje się imie
+          i nazwisko odbiorcy danego maila. Taki mail zostanie wysłany do
+          wszystkich adresatów których zaznaczymy.
         </Text>
       </FlexBox>
     </Slide>
@@ -282,8 +284,8 @@ const Presentation = () => (
         >
           Po wysyłce maila ukaże nam się wiadomość na górze strony informująca
           nas o tym, że udało się pomyślnie stworzyć zaproszenie oraz link,
-          który otworzy nam panel w którym bedziemi mieli informacje o danym
-          zaproszeniu.
+          który otworzy nam panel w którym znajdziemy informacje odnośnie danego
+          zaproszenia .
         </Text>
         <Image src={invitationSuccess} width="70%" />
       </FlexBox>
@@ -324,6 +326,38 @@ const Presentation = () => (
           otrzymania odpowiedzi i czas, jaki upłynął od jego wysłania.
         </Text>
         <Image src={leftPanel} width="70%" />
+      </FlexBox>
+    </Slide>
+    <Slide backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Lista feedbacków
+      </Heading>
+      <FlexBox>
+        <Image src={statuses} width="150%" />
+        <Text
+          fontSize="22px"
+          color="black"
+          textAlign="justify"
+          lineHeight="30px"
+        >
+          <p>
+            Statusy informują nas o tym w jakim stanie znajduje się aktualnie
+            dany feedback.
+          </p>
+          <br />
+          Partial mówi o tym, że na wybrany feedback odpowiedziała część z osób
+          poproszonych o wystawienie opinii.
+          <br />
+          Completed mówi o tym, że na wybrany feedback odpowiedzieli wszyscy z
+          proszonych o wystawienie opinii.
+          <br />
+          Pending mówi o tym, że na wybrany feedback nie otrzymaliśmy jeszcze
+          żadnej odpowiedzi, a status oczekiwania nie jest dłuższy niż 7 dni
+          <br />
+          NoAnswer mówi o tym, że na wybrany feedback nie otrzymaliśmy żadnej
+          odpowiedzi, a status oczekiwania jest dłuższy niż 7 dni
+          <br />
+        </Text>
       </FlexBox>
     </Slide>
     <Slide backgroundColor="#f8f9fa">
