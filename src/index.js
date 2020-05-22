@@ -31,9 +31,9 @@ import logo from "./static/images/feedback-app-logo2.svg";
 import mainView from "./static/images/employeeList.png";
 import evaluationPage from "./static/images/evaluationPage.png";
 import thankYouPage from "./static/images/thankYouPage.png";
-import evaluationPageMobile1 from "./static/images/evaluationPage-mobile-1.png";
+import evaluationPageMobile1 from "./static/images/mobileEvaluation.png";
 import evaluationPageMobile2 from "./static/images/evaluationPage-mobile-2.png";
-import evaluationPageTablet1 from "./static/images/evaluationPage-tablet-1.png";
+import evaluationPageTablet1 from "./static/images/tableEvaluationPage.jpg";
 import evaluationPageTablet2 from "./static/images/evaluationPage-tablet-2.png";
 
 // SPECTACLE_CLI_THEME_START
@@ -158,9 +158,10 @@ const Presentation = () => (
           - listę pracowników. Lista odzwierciedla hierarchię aktualnie
           zalogowanego użytkownika. Za pomocą pola do wyszukiwania możemy
           wyszukać pracownika i klikając na niego przejść do jego listy
-          feedback'ów. Po lewej stronie widzimy także menu nawigacyjne do
-          przechodzenia pomiędzy listami a po kliknięciu w pole 'Wyślij
-          zaproszenie' otwiera się panel do jego tworzenia.
+          feedback'ów co pokażemy w dalszej części prezentacji. Po lewej stronie
+          widzimy także menu nawigacyjne do przechodzenia pomiędzy listami a po
+          kliknięciu w pole 'Wyślij zaproszenie' otwiera się panel do jego
+          tworzenia.
         </Text>
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
@@ -374,7 +375,7 @@ const Presentation = () => (
         Ocena pracownika - widok mobile
       </Heading>
       <FlexBox height="520px">
-        <Image src={evaluationPageMobile1} height="100%" />
+        <Image src={evaluationPageMobile1} height="99%" />
         <Image src={evaluationPageMobile2} height="100%" />
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
@@ -386,7 +387,7 @@ const Presentation = () => (
         Ocena pracownika - widok tablet
       </Heading>
       <FlexBox height="520px">
-        <Image src={evaluationPageTablet1} height="100%" />
+        <Image src={evaluationPageTablet1} height="99%" />
         <Image src={evaluationPageTablet2} height="100%" />
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
