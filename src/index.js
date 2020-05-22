@@ -73,23 +73,23 @@ const Presentation = () => (
       </FlexBox>
     </Slide>
     <Slide backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Wstęp
+      </Heading>
       <FlexBox flexDirection="column">
-        <Heading margin="0px" color="#ff5a00">
-          Wstęp
-        </Heading>
         <Text color="black" textAlign="justify">
-          Głównym celem aplikacji jest przyśpieszenie procesu zbierania opinii o
-          pracownikach Billennium. Chcemy w prosty sposób umożliwić wysyłanie
-          zaproszeń do oceny a także ułatwić przeglądanie i przechowywanie
-          odpowiedzi na nie. Feedbacki są zbierane z firm zewnętrznych, jak i z
-          naszej firmy.
+          Głównym celem aplikacji jest przyśpieszenie procesu wystawiania próśb
+          o feedback na temat danego pracownika, jak i również szybszego wglądu
+          do zebranych odpowiedzi. Feedbacki są zbierane i opisane w jednym
+          miejscu co umożliwia nam szybki dostęp. Wszystko w aplikacji jest
+          dostępne w jasny i przejrzysty sposób.
         </Text>
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
         <Image width="150px" src={billennium} />
       </FlexBox>
     </Slide>
-    <Slide backgroundColor="#f8f9fa">
+    <Slide backgroundColor="#f8f9fa" fontSize="22px">
       <Heading margin="0px" color="#ff5a00">
         Technologie
       </Heading>
@@ -171,16 +171,13 @@ const Presentation = () => (
       <Heading margin="0px" color="#ff5a00">
         Lista kontaktów
       </Heading>
-      <FlexBox>
-        <Text
-          fontSize="22px"
-          color="black"
-          textAlign="justify"
-          lineHeight="30px"
-        >
-          Jest to komponent, który służy do przechowywania naszych kontaktów -
-          osób do których będziemy chcieli wysyłać zaproszenia na temat
-          wystawienia opinii o danym pracowniku.
+      <FlexBox flexDirection="row" alignItems="center">
+        <Text fontSize="22px" color="black" textAlign="justify">
+          Jest to komponent, który służy do przechowywania naszych kontaktów. Do
+          kontaktów które znajdują się na tej liście będziemy mogli wysyłać
+          zaproszenia na temat wystawienia opinii o danym pracowniku. W prawym
+          górnym rogu znajduje się pasek do wyszukiwania który umożliwia nam
+          przeszukanie naszej listy.
         </Text>
         <Image src={contactList} width="70%" />
       </FlexBox>
@@ -192,16 +189,12 @@ const Presentation = () => (
       <Heading margin="0px" color="#ff5a00">
         Lista kontaktów
       </Heading>
-      <FlexBox alignItems="center">
-        <Image src={contactForm} width="70%" />
-        <Text
-          fontSize="22px"
-          color="black"
-          textAlign="justify"
-          lineHeight="30px"
-        >
-          W prawym górnym rogu znajduje się przycisk do otwierania formularza,
-          który umożliwia nam dodanie kontaktu do naszej listy.
+      <FlexBox flexDirection="row" alignItems="center">
+        <Image src={contactForm} width="60%" />
+        <Text fontSize="22px" color="black" textAlign="justify">
+          Pod paskiem do wyszukiwania kontaków znajduje się przycisk "Dodaj
+          kontakt" do otwarcia formularza, który umożliwia nam dodanie nowego
+          kontaktu do naszej listy.
         </Text>
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
@@ -214,7 +207,7 @@ const Presentation = () => (
       </Heading>
       <FlexBox>
         <Text
-          fontSize="24px"
+          fontSize="22px"
           color="black"
           textAlign="justify"
           lineHeight="30px"
@@ -235,7 +228,7 @@ const Presentation = () => (
       <FlexBox flexDirection="row" alignItems="center">
         <Image src={employeeFeedbacks} width="70%" />
         <Text
-          fontSize="24px"
+          fontSize="22px"
           color="black"
           textAlign="justify"
           lineHeight="30px"
@@ -243,7 +236,8 @@ const Presentation = () => (
           Po wybraniu pracownika z listy, przechodzimy do widoku jego
           feedbacków. Na tym widoku mamy wgląd do wszystkich feedbacków które
           dany pracownik otrzymał do tej pory. Możemy też stworzyć nowe
-          zaproszenie do wystawienia oceny o danym pracowniku.
+          zaproszenie do wystawienia oceny o danym pracowniku klikając przycisk
+          "Stwórz zaproszenie".
         </Text>
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
@@ -255,19 +249,14 @@ const Presentation = () => (
         Lista feedbacków
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
-        <Text
-          fontSize="22px"
-          color="black"
-          textAlign="justify"
-          lineHeight="30px"
-        >
-          W formularzu wpisujemy potrzebne informacje oraz wybieramy adresatów
-          do któych chcemy wysłać zaproszenie na temat danego pracownika. W
-          liście adresatów możemy wybrać osobę z naszej listy kontaktów lub z
-          listy pracowników. Jeżeli osoby do której chcemy wysłać prośbę o
-          wystawienie feedbacku nie ma na żadnej liście, możemy ją dodać
-          bezpośrednio z tego formularza, po naciśnięciu przycisku dodaj
-          kontakt.
+        <Text fontSize="22px" color="black" textAlign="justify">
+          Następnie otworzy nam się formularzu w którym wpisujemy potrzebne
+          informacje oraz wybieramy adresatów do któych chcemy wysłać
+          zaproszenie na temat danego pracownika. W liście adresatów możemy
+          wybrać osobę z naszej listy kontaktów lub z listy pracowników. Jeżeli
+          osoby do której chcemy wysłać prośbę o wystawienie feedbacku nie ma na
+          żadnej liście, możemy ją bezpośrednio dodać z tego formularza po
+          naciśnięciu przycisku "Dodaj kontakt".
         </Text>
         <Image src={invitationForm} width="70%" />
       </FlexBox>
@@ -312,54 +301,10 @@ const Presentation = () => (
           textAlign="justify"
           lineHeight="30px"
         >
-          Po wysyłce maila na górze strony ukaże nam się wiadomość informująca o
-          tym, że udało się pomyślnie stworzyć zaproszenie oraz link, po
-          kliknięciu którego otworzy się panel z informacjami dotyczącymi danego
-          zaproszenia.
-        </Text>
-        <Image src={invitationSuccess} width="70%" />
-      </FlexBox>
-      <FlexBox height="100%" alignItems="flex-end">
-        <Image width="150px" src={billennium} />
-      </FlexBox>
-    </Slide>
-    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
-      <Heading margin="0px" color="#ff5a00">
-        Lista feedbacków
-      </Heading>
-      <FlexBox alignItems="center">
-        <Image src={rightPanel} width="70%" />
-        <Text
-          fontSize="22px"
-          color="black"
-          textAlign="justify"
-          lineHeight="30px"
-        >
-          Po wejściu w szczegóły zaproszenia zobaczymy panel boczny, w którym
-          mamy podstawowe informacje na jego temat: kiedy zostało utworzone,
-          kiedy otrzymaliśmy ostatnią odpowiedź, jakiej firmy i jakiego projektu
-          dotyczy oraz listę wszystkich osób, do których zostało wysłane.
-        </Text>
-      </FlexBox>
-      <FlexBox height="100%" alignItems="flex-end">
-        <Image width="150px" src={billennium} />
-      </FlexBox>
-    </Slide>
-    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
-      <Heading margin="0px" color="#ff5a00">
-        Lista feedbacków
-      </Heading>
-      <FlexBox alignItems="center">
-        <Text
-          fontSize="22px"
-          color="black"
-          textAlign="justify"
-          lineHeight="30px"
-        >
-          Po kliknięciu w adresata, który oddał feedback wysunie się kolejny
-          panel z jego szczegółami. Zobaczymy na nim odpowiedzi na pytania z
-          formularza oceny, dane o oceniającym (firma, stanowisko) oraz datę
-          otrzymania odpowiedzi i czas, jaki upłynął od wysłania zaproszenia.
+          Po wysyłce maila ukaże nam się wiadomość na górze strony informująca
+          nas o tym, że udało się pomyślnie stworzyć zaproszenie oraz link,
+          który otworzy nam panel. W panelu tym możemy znaleźć między innymi
+          informacje odnośnie danego zaproszenia .
         </Text>
         <Image src={leftPanel} width="70%" />
       </FlexBox>
@@ -410,7 +355,7 @@ const Presentation = () => (
       <FlexBox display="flex" width="100%" justifyContent="space-around">
         <Image src={evaluationPage} width="70%" />
         <Text
-          fontSize="20px"
+          fontSize="22px"
           color="black"
           margin="22px"
           lineHeight="30px"
@@ -470,6 +415,20 @@ const Presentation = () => (
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
         <Image width="150px" src={billennium} />
+      </FlexBox>
+    </Slide>
+    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Rozwój
+      </Heading>
+      <FlexBox height="100%" flexDirection="row" alignItems="flex-start">
+        <Text fontSize="32px" color="black" textAlign="justify" marginTop="0px">
+          W przyszłości planujemy dodać kolejne szablony formularza oceny
+          pracownika, żeby osoby z różnych stanowisk mogły otrzymać ocene
+          dopasowaną do ich potrzeb. Planujemy też dodać tłumaczenie na język
+          angielski aby osoby z innych krajów mogły swobodnie korzystać z
+          aplikacji. Planowana jest też integracja z naszym systemem DCMT.
+        </Text>
       </FlexBox>
     </Slide>
   </Deck>
