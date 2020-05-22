@@ -292,12 +292,12 @@ const Presentation = () => (
       <FlexBox flexDirection="row" alignItems="center">
         <Text fontSize="20px" color="black" textAlign="left">
           Aby stworzyć nowe zaproszenie należy kliknąć "Stwórz zaproszenie".
-          Otworzy nam się formularzu w którym wpisujemy potrzebne informacje
-          oraz wybieramy adresatów do któych chcemy wysłać zaproszenie na temat
+          Otworzy nam się formularz w którym wpisujemy potrzebne informacje oraz
+          wybieramy adresatów do któych chcemy wysłać zaproszenie na temat
           danego pracownika. W liście adresatów możemy wybrać osobę z naszej
           listy kontaktów lub z listy pracowników. Jeżeli osoby do której chcemy
           wysłać prośbę o wystawienie feedbacku nie ma na żadnej liście, możemy
-          ją bezpośrednio dodać z tego formularza po naciśnięciu przycisku
+          ją dodać bezpośrednio z tego formularza po naciśnięciu przycisku
           "Dodaj kontakt".
         </Text>
         <Image src={addInvitation} width="70%" />
@@ -474,12 +474,17 @@ const Presentation = () => (
           aplikacji. Planowana jest też integracja z naszym systemem DCMT.
         </Text>
       </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
+      </FlexBox>
     </Slide>
     <Slide backgroundColor="#f8f9fa">
-      <Heading margin="0px" color="#ff5a00">
-        Dziękujemy za uwagę :)
-      </Heading>
-      <FlexBox height="100%" alignItems="flex-end">
+      <FlexBox height="100%">
+        <Heading margin="0px" color="#ff5a00">
+          Dziękujemy za uwagę :)
+        </Heading>
+      </FlexBox>
+      <FlexBox height="150px" alignItems="flex-end">
         <Image width="150px" src={billennium} />
       </FlexBox>
     </Slide>
