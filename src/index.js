@@ -77,7 +77,7 @@ const Presentation = () => (
         Wstęp
       </Heading>
       <FlexBox flexDirection="column">
-        <Text color="black" textAlign="justify">
+        <Text color="black" textAlign="left">
           Głównym celem aplikacji jest przyśpieszenie procesu wystawiania próśb
           o feedback na temat danego pracownika, jak i również szybszego wglądu
           do zebranych odpowiedzi. Feedbacki są zbierane i opisane w jednym
@@ -152,7 +152,7 @@ const Presentation = () => (
           color="black"
           margin="0px 16px"
           lineHeight="30px"
-          textAlign="justify"
+          textAlign="left"
         >
           Po udanym logowaniu jesteśmy przekierowywani na główny widok aplikacji
           - listę pracowników. Lista odzwierciedla hierarchię aktualnie
@@ -172,7 +172,7 @@ const Presentation = () => (
         Lista kontaktów
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
-        <Text fontSize="22px" color="black" textAlign="justify">
+        <Text fontSize="22px" color="black" textAlign="left">
           Jest to komponent, który służy do przechowywania naszych kontaktów. Do
           kontaktów które znajdują się na tej liście będziemy mogli wysyłać
           zaproszenia na temat wystawienia opinii o danym pracowniku. W prawym
@@ -191,7 +191,7 @@ const Presentation = () => (
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
         <Image src={contactForm} width="70%" />
-        <Text fontSize="22px" color="black" textAlign="justify">
+        <Text fontSize="22px" color="black" textAlign="left">
           Pod paskiem do wyszukiwania kontaków znajduje się przycisk "Dodaj
           kontakt" do otwarcia formularza, który umożliwia nam dodanie nowego
           kontaktu do naszej listy.
@@ -206,12 +206,7 @@ const Presentation = () => (
         Lista kontaktów
       </Heading>
       <FlexBox>
-        <Text
-          fontSize="22px"
-          color="black"
-          textAlign="justify"
-          lineHeight="30px"
-        >
+        <Text fontSize="22px" color="black" textAlign="left" lineHeight="30px">
           Po poprawnym dodaniu kontaktu na górze strony wyświetli się komunikat
           informujący nas o sukcesie.
         </Text>
@@ -227,12 +222,7 @@ const Presentation = () => (
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
         <Image src={employeeFeedbacks} width="70%" />
-        <Text
-          fontSize="22px"
-          color="black"
-          textAlign="justify"
-          lineHeight="30px"
-        >
+        <Text fontSize="22px" color="black" textAlign="left" lineHeight="30px">
           Po wybraniu pracownika z listy, przechodzimy do widoku jego
           feedbacków. Na tym widoku mamy wgląd do wszystkich feedbacków które
           dany pracownik otrzymał do tej pory.
@@ -252,26 +242,37 @@ const Presentation = () => (
           fontSize="22px"
           color="black"
           margin="0px 16px"
-          textAlign="justify"
+          textAlign="left"
           lineHeight="30px"
         >
-          <p>
-            Statusy informują nas o tym w jakim stanie znajduje się aktualnie
-            dany feedback.
-          </p>
-          <br />
-          Partial mówi o tym, że na wybrany feedback odpowiedziała część z osób
-          poproszonych o wystawienie opinii.
-          <br />
-          Completed mówi o tym, że na wybrany feedback odpowiedzieli wszyscy z
-          proszonych o wystawienie opinii.
-          <br />
-          Pending mówi o tym, że na wybrany feedback nie otrzymaliśmy jeszcze
-          żadnej odpowiedzi, a status oczekiwania nie jest dłuższy niż 7 dni
-          <br />
-          NoAnswer mówi o tym, że na wybrany feedback nie otrzymaliśmy żadnej
-          odpowiedzi, a status oczekiwania jest dłuższy niż 7 dni
-          <br />
+          Statusy informują nas o tym w jakim stanie znajduje się aktualnie dany
+          feedback.
+          <UnorderedList
+            fontSize="18px"
+            color="black"
+            margin="0px"
+            textAlign="left"
+            padding="0px"
+          >
+            <ListItem>
+              Partial mówi o tym, że na wybrany feedback odpowiedziała część z
+              osób poproszonych o wystawienie opinii.
+            </ListItem>
+            <ListItem>
+              {" "}
+              Completed mówi o tym, że na wybrany feedback odpowiedzieli wszyscy
+              z proszonych o wystawienie opinii.
+            </ListItem>
+            <ListItem>
+              Pending mówi o tym, że na wybrany feedback nie otrzymaliśmy
+              jeszcze żadnej odpowiedzi, a status oczekiwania nie jest dłuższy
+              niż 7 dni
+            </ListItem>
+            <ListItem>
+              NoAnswer mówi o tym, że na wybrany feedback nie otrzymaliśmy
+              żadnej odpowiedzi, a status oczekiwania jest dłuższy niż 7 dni
+            </ListItem>
+          </UnorderedList>
         </Text>
       </FlexBox>
       <FlexBox height="100%" alignItems="flex-end">
@@ -283,7 +284,7 @@ const Presentation = () => (
         Lista feedbacków
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
-        <Text fontSize="22px" color="black" textAlign="justify">
+        <Text fontSize="22px" color="black" textAlign="left">
           Możemy też stworzyć nowe zaproszenie do wystawienia oceny o danym
           pracowniku klikając przycisk "Stwórz zaproszenie". Otworzy nam się
           formularzu w którym wpisujemy potrzebne informacje oraz wybieramy
@@ -310,7 +311,7 @@ const Presentation = () => (
           fontSize="22px"
           color="black"
           margin="0px 16px"
-          textAlign="justify"
+          textAlign="left"
           lineHeight="30px"
         >
           Z pozycji formularza możemy włączyć podgląd maila, który zostanie
@@ -331,12 +332,7 @@ const Presentation = () => (
         Lista feedbacków
       </Heading>
       <FlexBox>
-        <Text
-          fontSize="22px"
-          color="black"
-          textAlign="justify"
-          lineHeight="30px"
-        >
+        <Text fontSize="22px" color="black" textAlign="left" lineHeight="30px">
           Po wysyłce maila ukaże nam się wiadomość na górze strony informująca
           nas o tym, że udało się pomyślnie stworzyć zaproszenie oraz link,
           który otworzy nam panel. W panelu tym możemy znaleźć między innymi
@@ -360,7 +356,7 @@ const Presentation = () => (
           color="black"
           margin="22px"
           lineHeight="30px"
-          textAlign="justify"
+          textAlign="left"
           lineHeight="30px"
         >
           Pracownik poproszony o wystawienie opinii po kliknięciu w przycisk
@@ -407,7 +403,7 @@ const Presentation = () => (
           color="black"
           margin="20px"
           lineHeight="30px"
-          textAlign="justify"
+          textAlign="left"
         >
           Po pomyślnym wysłaniu oceny osoba oceniająca zostaje przekierowana na
           stronę z podziękowaniami.
@@ -423,7 +419,7 @@ const Presentation = () => (
         Rozwój
       </Heading>
       <FlexBox height="100%" flexDirection="row" alignItems="flex-start">
-        <Text fontSize="32px" color="black" textAlign="justify" marginTop="0px">
+        <Text fontSize="32px" color="black" textAlign="left" marginTop="0px">
           W przyszłości planujemy dodać kolejne szablony formularza oceny
           pracownika, żeby osoby z różnych stanowisk mogły otrzymać ocene
           dopasowaną do ich potrzeb. Planujemy też dodać tłumaczenie na język
