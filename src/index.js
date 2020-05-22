@@ -8,7 +8,9 @@ import invitationForm from "./static/images/invitationForm.png";
 import emailPreview from "./static/images/emailPreview.png";
 import invitationSuccess from "./static/images/invitationSuccess.png";
 import rightPanel from "./static/images/rightPanel.png";
+import leftPanel from "./static/images/leftPanel.png";
 import statuses from "./static/images/statuses.png";
+import billennium from "./static/images/Sygnatura.svg";
 
 import {
   Box,
@@ -83,8 +85,11 @@ const Presentation = () => (
           dostępne w jasny i przejrzysty sposób.
         </Text>
       </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
+      </FlexBox>
     </Slide>
-    <Slide backgroundColor="#f8f9fa" fontSize="24px">
+    <Slide backgroundColor="#f8f9fa" fontSize="22px">
       <Heading margin="0px" color="#ff5a00">
         Technologie
       </Heading>
@@ -132,29 +137,34 @@ const Presentation = () => (
           </UnorderedList>
         </div>
       </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
+      </FlexBox>
     </Slide>
     <Slide backgroundColor="#f8f9fa">
       <Heading margin="0px" color="#ff5a00">
         Główny widok - lista pracowników
       </Heading>
-      <FlexBox display="flex" width="100%" justifyContent="space-around">
-        <Image src={mainView} width="60%" />
+      <FlexBox>
+        <Image src={mainView} width="70%" />
         <Text
-          fontSize="24px"
+          fontSize="22px"
           color="black"
-          margin="20px"
+          margin="0px 16px"
           lineHeight="30px"
           textAlign="justify"
         >
           Po udanym logowaniu jesteśmy przekierowywani na główny widok aplikacji
           - listę pracowników. Lista odzwierciedla hierarchię aktualnie
-          zalogowanego użytkownika. W tym przypadku jest to hierachia jednego z
-          manager'ów. Za pomocą pola do wyszukiwania możemy wyszukać pracownika
-          i klikając na niego przejść do jego listy feedback'ów. Po lewej
-          stronie widzimi także menu nawigacyjne do przechodzenia pomiędzy
-          listami a po kliknięciu w pole 'Wyślij zaproszenie' otwiera się panel
-          do jego stworzenia.
+          zalogowanego użytkownika. Za pomocą pola do wyszukiwania możemy
+          wyszukać pracownika i klikając na niego przejść do jego listy
+          feedback'ów. Po lewej stronie widzimy także menu nawigacyjne do
+          przechodzenia pomiędzy listami a po kliknięciu w pole 'Wyślij
+          zaproszenie' otwiera się panel do jego tworzenia.
         </Text>
+      </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
       </FlexBox>
     </Slide>
     <Slide backgroundColor="#f8f9fa">
@@ -162,48 +172,67 @@ const Presentation = () => (
         Lista kontaktów
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
-        <Text fontSize="24px" color="black" textAlign="justify">
+        <Text fontSize="22px" color="black" textAlign="justify">
           Jest to komponent, który służy do przechowywania naszych kontaktów. Do
           kontaktów które znajdują się na tej liście będziemy mogli wysyłać
           zaproszenia na temat wystawienia opinii o danym pracowniku. W prawym
           górnym rogu znajduje się pasek do wyszukiwania który umożliwia nam
           przeszukanie naszej listy.
         </Text>
-        <Image src={contactList} width="60%" />
+        <Image src={contactList} width="70%" />
+      </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
       </FlexBox>
     </Slide>
-    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+    <Slide backgroundColor="#f8f9fa">
       <Heading margin="0px" color="#ff5a00">
         Lista kontaktów
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
         <Image src={contactForm} width="60%" />
-        <Text fontSize="24px" color="black" textAlign="justify">
+        <Text fontSize="22px" color="black" textAlign="justify">
           Pod paskiem do wyszukiwania kontaków znajduje się przycisk "Dodaj
           kontakt" do otwarcia formularza, który umożliwia nam dodanie nowego
           kontaktu do naszej listy.
         </Text>
       </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
+      </FlexBox>
     </Slide>
-    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+    <Slide backgroundColor="#f8f9fa">
       <Heading margin="0px" color="#ff5a00">
         Lista kontaktów
       </Heading>
-      <FlexBox flexDirection="row" alignItems="center">
-        <Text fontSize="24px" color="black" textAlign="justify">
-          Po poprawnym dodaniu kontaktu na górze strony wyświetli nam się
-          komunikat informujący nas o sukcesie.
+      <FlexBox>
+        <Text
+          fontSize="22px"
+          color="black"
+          textAlign="justify"
+          lineHeight="30px"
+        >
+          Po poprawnym dodaniu kontaktu na górze strony wyświetli się komunikat
+          informujący nas o sukcesie.
         </Text>
-        <Image src={contactFormSuccess} width="60%" />
+        <Image src={contactFormSuccess} width="70%" />
+      </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
       </FlexBox>
     </Slide>
-    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+    <Slide backgroundColor="#f8f9fa">
       <Heading margin="0px" color="#ff5a00">
         Lista feedbacków
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
-        <Image src={employeeFeedbacks} width="60%" />
-        <Text fontSize="24px" color="black" textAlign="justify">
+        <Image src={employeeFeedbacks} width="70%" />
+        <Text
+          fontSize="22px"
+          color="black"
+          textAlign="justify"
+          lineHeight="30px"
+        >
           Po wybraniu pracownika z listy, przechodzimy do widoku jego
           feedbacków. Na tym widoku mamy wgląd do wszystkich feedbacków które
           dany pracownik otrzymał do tej pory. Możemy też stworzyć nowe
@@ -211,13 +240,16 @@ const Presentation = () => (
           "Stwórz zaproszenie".
         </Text>
       </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
+      </FlexBox>
     </Slide>
-    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+    <Slide backgroundColor="#f8f9fa">
       <Heading margin="0px" color="#ff5a00">
         Lista feedbacków
       </Heading>
       <FlexBox flexDirection="row" alignItems="center">
-        <Text fontSize="24px" color="black" textAlign="justify">
+        <Text fontSize="22px" color="black" textAlign="justify">
           Następnie otworzy nam się formularzu w którym wpisujemy potrzebne
           informacje oraz wybieramy adresatów do któych chcemy wysłać
           zaproszenie na temat danego pracownika. W liście adresatów możemy
@@ -226,24 +258,36 @@ const Presentation = () => (
           żadnej liście, możemy ją bezpośrednio dodać z tego formularza po
           naciśnięciu przycisku "Dodaj kontakt".
         </Text>
-        <Image src={invitationForm} width="60%" />
+        <Image src={invitationForm} width="70%" />
+      </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
       </FlexBox>
     </Slide>
-    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
+    <Slide backgroundColor="#f8f9fa">
       <Heading margin="0px" color="#ff5a00">
         Lista feedbacków
       </Heading>
       <FlexBox alignItems="center">
-        <Image src={emailPreview} width="60%" />
-        <Text fontSize="24px" color="black" textAlign="justify">
+        <Image src={emailPreview} width="70%" />
+        <Text
+          fontSize="22px"
+          color="black"
+          margin="0px 16px"
+          textAlign="justify"
+          lineHeight="30px"
+        >
           Z pozycji formularza możemy włączyć podgląd maila, który zostanie
           wysłany do wcześniej wybranych przez nas adresatów. Na szablonie
-          znajdziemy informacje o użytkownik, który chce wysłać maila, o
-          pracowniku, którego chcemy ocenić oraz nazwę projektu w którym brał
-          udział. W miejscu napisu Odbiorco w docelowym mailu znajduje się imie
-          i nazwisko odbiorcy danego maila. Taki mail zostanie wysłany do
-          wszystkich adresatów których zaznaczymy.
+          znajdziemy informacje o użytkowniku, który chce wysłać maila
+          (aktualnie zalogowany użytkownik), o pracowniku, którego chcemy ocenić
+          oraz nazwę projektu w którym brał udział. W miejscu napisu Odbiorco w
+          docelowym mailu znajduje się imie i nazwisko odbiorcy danego maila.
+          Taki mail zostanie wysłany do wszystkich adresatów których zaznaczymy.
         </Text>
+      </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
       </FlexBox>
     </Slide>
     <Slide backgroundColor="#f8f9fa">
@@ -251,13 +295,21 @@ const Presentation = () => (
         Lista feedbacków
       </Heading>
       <FlexBox>
-        <Text fontSize="24px" color="black" textAlign="justify">
+        <Text
+          fontSize="22px"
+          color="black"
+          textAlign="justify"
+          lineHeight="30px"
+        >
           Po wysyłce maila ukaże nam się wiadomość na górze strony informująca
           nas o tym, że udało się pomyślnie stworzyć zaproszenie oraz link,
           który otworzy nam panel. W panelu tym możemy znaleźć między innymi
           informacje odnośnie danego zaproszenia .
         </Text>
-        <Image src={invitationSuccess} width="60%" />
+        <Image src={leftPanel} width="70%" />
+      </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
       </FlexBox>
     </Slide>
     <Slide backgroundColor="#f8f9fa">
@@ -266,13 +318,20 @@ const Presentation = () => (
       </Heading>
       <FlexBox>
         <Image src={statuses} width="150%" />
-        <Text fontSize="24px" color="black" textAlign="justify">
+        <Text
+          fontSize="22px"
+          color="black"
+          margin="0px 16px"
+          textAlign="justify"
+          lineHeight="30px"
+        >
           <p>
             Statusy informują nas o tym w jakim stanie znajduje się aktualnie
             dany feedback.
           </p>
-          <br /> Partial mówi o tym, że na wybrany feedback odpowiedziała część
-          z osób poproszonych o wystawienie opinii.
+          <br />
+          Partial mówi o tym, że na wybrany feedback odpowiedziała część z osób
+          poproszonych o wystawienie opinii.
           <br />
           Completed mówi o tym, że na wybrany feedback odpowiedzieli wszyscy z
           proszonych o wystawienie opinii.
@@ -285,36 +344,56 @@ const Presentation = () => (
           <br />
         </Text>
       </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
+      </FlexBox>
     </Slide>
     <Slide backgroundColor="#f8f9fa">
       <Heading margin="0px" color="#ff5a00">
         Ocena pracownika
       </Heading>
       <FlexBox display="flex" width="100%" justifyContent="space-around">
+        <Image src={evaluationPage} width="70%" />
         <Text
-          fontSize="24px"
+          fontSize="22px"
           color="black"
-          margin="20px"
+          margin="22px"
           lineHeight="30px"
           textAlign="justify"
+          lineHeight="30px"
         >
-          Po kliknięciu w przycisk 'Wystaw opinię' w otrzymanym od nas mailu w
-          przeglądarce otwiera się okno z formularzem do oceny pracownika.
-          Strona jest w pełni responsywna, co pozwoli na wypełnienie formularza
-          na dowolnym urządzeniu.
+          Pracownik poproszony o wystawienie opinii po kliknięciu w przycisk
+          'Wystaw opinię' w otrzymanym od nas mailu zobaczy w przeglądarce nowe
+          okno z formularzem oceny pracownika. Strona jest w pełni responsywna,
+          co pozwoli na wypełnienie formularza na dowolnym urządzeniu.
         </Text>
-        <Image src={evaluationPage} width="60%" />
+      </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
       </FlexBox>
     </Slide>
     <Slide backgroundColor="#f8f9fa">
       <Heading margin="0px" color="#ff5a00">
-        Ocena pracownika - widok mobilny
+        Ocena pracownika - widok mobile
       </Heading>
-      <FlexBox height="400px">
+      <FlexBox height="520px">
         <Image src={evaluationPageMobile1} height="100%" />
         <Image src={evaluationPageMobile2} height="100%" />
+      </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
+      </FlexBox>
+    </Slide>
+    <Slide backgroundColor="#f8f9fa">
+      <Heading margin="0px" color="#ff5a00">
+        Ocena pracownika - widok tablet
+      </Heading>
+      <FlexBox height="520px">
         <Image src={evaluationPageTablet1} height="100%" />
         <Image src={evaluationPageTablet2} height="100%" />
+      </FlexBox>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
       </FlexBox>
     </Slide>
     <Slide backgroundColor="#f8f9fa">
@@ -322,9 +401,8 @@ const Presentation = () => (
         Strona podziękowań
       </Heading>
       <FlexBox display="flex" width="100%" justifyContent="space-around">
-        <Image src={thankYouPage} width="60%" />
         <Text
-          fontSize="24px"
+          fontSize="22px"
           color="black"
           margin="20px"
           lineHeight="30px"
@@ -333,20 +411,10 @@ const Presentation = () => (
           Po pomyślnym wysłaniu oceny osoba oceniająca zostaje przekierowana na
           stronę z podziękowaniami.
         </Text>
+        <Image src={thankYouPage} width="70%" />
       </FlexBox>
-    </Slide>
-    <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
-      <Heading margin="0px" color="#ff5a00">
-        Lista feedbacków
-      </Heading>
-      <FlexBox height="100%" flexDirection="row" alignItems="flex-start">
-        <Image src={rightPanel} width="70%" />
-        <Text
-          fontSize="24px"
-          color="black"
-          textAlign="left"
-          marginTop="0px"
-        ></Text>
+      <FlexBox height="100%" alignItems="flex-end">
+        <Image width="150px" src={billennium} />
       </FlexBox>
     </Slide>
     <Slide transitionEffect="fade" backgroundColor="#f8f9fa">
