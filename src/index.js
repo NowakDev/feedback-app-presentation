@@ -149,10 +149,10 @@ const Presentation = () => (
           - listę pracowników. Lista odzwierciedla hierarchię aktualnie
           zalogowanego użytkownika. W tym przypadku jest to hierachia jednego z
           manager'ów. Za pomocą pola do wyszukiwania możemy wyszukać pracownika
-          i klijac na niego przejść do jego listy feedback'ów. Po lewej stronie
-          widzimy także menu nawigacyjne do przechodzenia pomiędzy listami a po
-          kliknięciu w pole 'Wyślij zaproszenie' otwiera się panel do jego
-          stworzenia.
+          i klikając na niego przejść do jego listy feedback'ów. Po lewej
+          stronie widzimy także menu nawigacyjne do przechodzenia pomiędzy
+          listami a po kliknięciu w pole 'Wyślij zaproszenie' otwiera się panel
+          do jego tworzenia.
         </Text>
       </FlexBox>
     </Slide>
